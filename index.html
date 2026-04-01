@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slot Machine Picker</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+  <!--<h1>🎰 Team Picker</h1>-->
+
+  <div class="app">
+    <!-- SLOT MACHINE -->
+    <div class="slot-wrap">
+      <div class="slot-machine" id="slotMachine">
+        <div class="reel"><div class="reel-track" id="reel1"></div></div>
+        <div class="reel"><div class="reel-track" id="reel2"></div></div>
+        <div class="reel"><div class="reel-track" id="reel3"></div></div>
+      </div>
+
+      <button id="spinBtn">Spin</button>
+    </div>
+
+    <!-- STAFF PICK LIST -->
+    <div class="controls">
+      <h3>Staff List</h3>
+      <p class="hint">Toggle who is eligible to be selected.</p>
+      <div id="nameList" class="name-list"></div>
+    </div>
+  </div>
+
+  <!-- WINNER MODAL -->
+  <div id="winnerModal" class="modal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="winnerTitle">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Close">×</button>
+      <h2 id="winnerTitle">🎉 Winner</h2>
+      <div id="winnerName" class="winner-name"></div>
+
+      <div class="modal-actions">
+        <button id="spinAgainBtn">Spin Again</button>
+        <button id="modalOkBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
